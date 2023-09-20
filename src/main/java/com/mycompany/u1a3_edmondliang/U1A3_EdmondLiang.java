@@ -101,39 +101,49 @@ public class U1A3_EdmondLiang extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
+            // Attempt to parse the text entered in txtgetscale as an integer
             int category=Integer.parseInt(txtgetscale.getText());
+            
+            // Use a switch statement to determine the hurricane category based on the entered number
             switch(category) {
+                // Display information for Category 1 hurricane
                 case 1:
                     lblHurricaneCategory.setText("wind seed for category 1 is:");
                     lblCategorySpeed.setText("74-95 mph or 64-82 kt or 119-153 km/hr");
                     break;
-
+                    
+                // Display information for Category 2 hurricane
                 case 2:
                     lblHurricaneCategory.setText("wind speed for category 2 is:");
                     lblCategorySpeed.setText("96-110 mph or 83-95 kt or 154-177 km/hr");
                     break;
-
+                    
+                // Display information for Category 3 hurricane
                 case 3:
                     lblHurricaneCategory.setText("wind speedforcategory 3 is:");
                     lblCategorySpeed.setText("111-130 mph or 96-113 kt or 178-209 km/hr");
                     break;
-            
+                    
+                // Display information for Category 4 hurricane
                 case 4:
                     lblHurricaneCategory.setText("wind speed for category 4 is:");
                     lblCategorySpeed.setText("131-155 mph or 114-135 kt or 210-249 km/hr");
                     break;
-            
+                    
+                // Display information for Category 5 hurricane
                 case 5:
                     lblHurricaneCategory.setText("wind speed for category 5 is:");
                     lblCategorySpeed.setText("greater than 155 mph or 135 kt or 249 km/hr");
                     break;
-
+                    
+                // Display an error message if the entered number is not within 1-5
                 default:
                     lblHurricaneCategory.setText("error");
                     lblCategorySpeed.setText("please enter a valid number");
         }
         }
         catch (Exception e) {
+            // Handle exceptions if the input cannot be parsed as an integer
             lblHurricaneCategory.setText("error");
             lblCategorySpeed.setText("please enter a number");
             }
